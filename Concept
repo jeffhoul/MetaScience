@@ -1,4 +1,16 @@
 This project writes code that (1) simulates some ecological phenomenon (e.g. population size or species richness)  with a defined number of drivers (i.e. causal mechanisms or independent variables) and (2) the sampling process by which data are collected.  Thus, we create a dependent variable (i.e. response variable or ecological phenomenon) that is a function of 1:D different drivers and we sample 1:V different variables (i.e. potential drivers).  The sampled variables may or may not include the true drivers.
-We will start with the dependent variable being a simple linear function of the drivers without interactions among thedrivers. The complexity of the model will be defined by the number of causal variables.
+We will start with the dependent variable being a simple linear function of the drivers without interactions among thedrivers. The complexity of the model will be defined by the number of causal variables.  The strength of the relationships will either vary among drivers or not.
 As we increase the complexity of the models we will add nonlinearity and interactions.
 The sampling design will manipulate sample size, measurement error on the dependent variable, measurement error on the independent variable and amount of correlation among independent variables.  In addition, we will sample between 0 and 100 % of the true drivers.  This incorporates the concept of 'model error'.
+We use traditional modelling approaches (i.e. AIC and p-values) on simulated data  to select 'best' models and estimate parameters.  As the project develops we'll use more complex approaches such as non-linear regression, Bayesian methods, symbolic regression, state-space models, structural equation modelling, empirical dynamic modelling, optimal alpha, neural nets, gradient boosted regression and random forests.
+We evaluate how model complexity, sample size, measurement error on the dependent variable, measurement error on the indepdendent error, number of true causal variables left unsampled, number of non-causal variables sampled and analytical technique used affect our ability to identify the 'true' model and estimate parameters accurately.
+How many drivers?  Ten to twenty.
+How many sampled variables? Ten to twenty.
+How strong should the relationship(s) between causal and response variable(s) be? Slopes on drivers will always sum to the maximum number of drivers.  So, if there could be up to ten drivers then the sum of slopes across all true drivers will be 10.  Thus, if ther is one true driver the slope will be 10. If there are 10 true drivers of equal strength the slope for each will be 1.  If there are 5 true drivers of equal strfength the slope for each wil be 2.  
+Will slopes vary among drivers?  we will evalauate under both scenariosn, when slopes vary and when they do not.  But in both cases the slopes will sum to the maximum nymber of drivers. 
+How many samples (i.e. n)?  3 to 1000.
+How much variability in variables?  Does it matter?
+How much measurement error on dependent variable?  0 to 100% of true value (i.e +/- 100 %)
+How much measurement error on independent variable?  0 to 100% of true value (i.e +/- 100 %)
+How strong will correlation be among independent variables? -0.7 to 0.7.  These thresholds are arbitrary but based on the rule of thumb not to include variables with a correltaion greater than 0.7 in the same linear models.
+How common will correlation among indepdendent variables be?  From 1 pair to all pairs.
