@@ -1,0 +1,16 @@
+---
+title: "Jan262024"
+output: html_document
+date: "2024-01-26"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+# Creat a vector of names for independent variables.  Call the vector #IV
+```{r}
+IV<-c("A","B", "C","D", "E", "F", "G", "H", "I". "J")
+```
+
