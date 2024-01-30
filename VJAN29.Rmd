@@ -33,3 +33,79 @@ Slopes <- list(
 
 ```
 
+# Set row counter to 0
+
+```{r}
+row_counter <- 0
+Intercept<-0
+```
+
+
+#Set up all of the for loops to cycle through differnt number of drivers a
+# different number of samples, different number of samples, differnt amounts #of meaurement error
+
+```{r}
+for (i in 1:2) {  # samples
+  for (j in 1:1) {  # drivers
+    if (i == 1) {  # Use == for equality check
+      for (k in 1:2) {
+        for (n_values in c(5)) {
+          for (sd1 in c(50)) {
+            for (sd2 in c(50)) {
+              for (sd3 in c(50)) {
+                for (n_reps in 1:1) {
+                  variable_list <- list()  # Create a list to store the variables
+
+                  for (drivers in IV) {
+                    variable_values <- rnorm(100, mean = 0, sd = 1)
+                    variable_list[[drivers]] <- variable_values
+                  }
+                  SR <- Intercept + Slopes[[i]][k] * variable_list[[k]]  + rnorm(100, 0, sd2)
+                }
+              }
+            }
+          }
+        }
+      }
+    
+      
+      
+      
+      
+      
+      
+      } else {  # Use == for equality check
+      for (k in 1:2) {
+        for (n_values in c(5)) {
+          for (sd1 in c(50)) {
+            for (sd2 in c(50)) {
+              for (sd3 in c(50)) {
+                for (n_reps in 1:1) {
+                  variable_list <- list()  # Create a list to store the variables
+
+                  for (drivers in IV) {
+                    variable_values <- rnorm(100, mean = 0, sd = 1)
+                    variable_list[[drivers]] <- variable_values
+                  }
+                  SR1 <- Intercept + Slopes[[i]][k] * variable_list[[k]]  + rnorm(100, 0, sd2)
+                }
+              }
+            }
+          }
+        }
+      }
+    
+      
+    
+      } 
+
+    }
+  }
+
+
+
+      
+     
+         
+```
+
